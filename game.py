@@ -16,8 +16,16 @@ def main():
     # 遊戲邏輯（視窗開啟時產生新答案）
     game = GuessGame(1, 100)
 
-    # 說明文字
-    label_intro = ttk.Label(root, text="請輸入 1–100 的整數：", font=("Segoe UI", 11))
+    # 各區塊文字顏色樣式
+    style = ttk.Style()
+    style.configure("Intro.TLabel", foreground="#1a5276")   # 深藍：說明
+    style.configure("Hint.TLabel", foreground="#555555")   # 深灰：提示
+    style.configure("Count.TLabel", foreground="#1e8449")   # 綠：猜測次數
+    style.configure("Secret.TLabel", foreground="red")      # 紅：答案
+    style.configure("Accent.TButton", foreground="#1a5276")
+
+    # 說明文字（深藍）
+    label_intro = ttk.Label(root, text="請輸入 1–100 的整數：", font=("Segoe UI", 11), style="Intro.TLabel")
     label_intro.pack(pady=(16, 8))
 
     # 輸入框
@@ -26,25 +34,23 @@ def main():
     entry_guess = ttk.Entry(frame_input, width=12, font=("Segoe UI", 12))
     entry_guess.pack(side=tk.LEFT, padx=4)
 
-    # 「猜」按鈕
-    btn_guess = ttk.Button(frame_input, text="猜")
+    # 「猜」按鈕（深藍文字）
+    btn_guess = ttk.Button(frame_input, text="猜", style="Accent.TButton")
     btn_guess.pack(side=tk.LEFT, padx=4)
 
     # 「再玩一次」按鈕（答對後顯示，先不 pack）
-    btn_restart = ttk.Button(frame_input, text="再玩一次")
+    btn_restart = ttk.Button(frame_input, text="再玩一次", style="Accent.TButton")
 
-    # 提示標籤
-    label_hint = ttk.Label(root, text="輸入數字後按「猜」", font=("Segoe UI", 10))
+    # 提示標籤（深灰）
+    label_hint = ttk.Label(root, text="輸入數字後按「猜」", font=("Segoe UI", 10), style="Hint.TLabel")
     label_hint.pack(pady=12)
 
-    # 猜測次數標籤
-    label_count = ttk.Label(root, text="猜測次數：0", font=("Segoe UI", 9))
+    # 猜測次數標籤（綠）
+    label_count = ttk.Label(root, text="猜測次數：0", font=("Segoe UI", 9), style="Count.TLabel")
     label_count.pack(pady=4)
 
     # 顯示本局答案（秘密數字），紅色文字
-    style_red = ttk.Style()
-    style_red.configure("Red.TLabel", foreground="red")
-    label_secret = ttk.Label(root, text=f"答案：{game.answer}", font=("Segoe UI", 9), style="Red.TLabel")
+    label_secret = ttk.Label(root, text=f"答案：{game.answer}", font=("Segoe UI", 9), style="Secret.TLabel")
     label_secret.pack(pady=4)
 
     def update_count_display():
