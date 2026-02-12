@@ -41,6 +41,10 @@ def main():
     label_count = ttk.Label(root, text="猜測次數：0", font=("Segoe UI", 9))
     label_count.pack(pady=4)
 
+    # 顯示本局答案（秘密數字）
+    label_secret = ttk.Label(root, text=f"答案：{game.answer}", font=("Segoe UI", 9))
+    label_secret.pack(pady=4)
+
     def update_count_display():
         label_count.config(text=f"猜測次數：{game.guess_count}")
 
@@ -73,6 +77,7 @@ def main():
         entry_guess.delete(0, tk.END)
         label_hint.config(text="輸入數字後按「猜」")
         label_count.config(text="猜測次數：0")
+        label_secret.config(text=f"答案：{game.answer}")
         btn_restart.pack_forget()
         btn_guess.pack(side=tk.LEFT, padx=4)
         entry_guess.focus_set()
