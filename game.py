@@ -41,8 +41,10 @@ def main():
     label_count = ttk.Label(root, text="猜測次數：0", font=("Segoe UI", 9))
     label_count.pack(pady=4)
 
-    # 顯示本局答案（秘密數字）
-    label_secret = ttk.Label(root, text=f"答案：{game.answer}", font=("Segoe UI", 9))
+    # 顯示本局答案（秘密數字），紅色文字
+    style_red = ttk.Style()
+    style_red.configure("Red.TLabel", foreground="red")
+    label_secret = ttk.Label(root, text=f"答案：{game.answer}", font=("Segoe UI", 9), style="Red.TLabel")
     label_secret.pack(pady=4)
 
     def update_count_display():
