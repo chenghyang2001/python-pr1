@@ -7,11 +7,11 @@ from tkinter import ttk
 from game_logic import GuessGame, RESULT_CORRECT, RESULT_TOO_LARGE, RESULT_TOO_SMALL
 
 
-def main():
-    root = tk.Tk()
-    root.title("猜數字遊戲")
-    root.geometry("400x240")
-    root.resizable(True, True)
+def run(parent: tk.Tk | tk.Toplevel) -> None:
+    """在給定的 parent 視窗中建立猜數字遊戲 UI，不呼叫 mainloop。"""
+    parent.title("猜數字遊戲")
+    parent.geometry("400x240")
+    parent.resizable(True, True)
 
     # 遊戲邏輯（視窗開啟時產生新答案）
     game = GuessGame(1, 100)
@@ -25,11 +25,11 @@ def main():
     style.configure("Accent.TButton", foreground="#1a5276")
 
     # 說明文字（深藍）
-    label_intro = ttk.Label(root, text="請輸入 1–100 的整數：", font=("Segoe UI", 11), style="Intro.TLabel")
+    label_intro = ttk.Label(parent, text="請輸入 1–100 的整數：", font=("Segoe UI", 11), style="Intro.TLabel")
     label_intro.pack(pady=(16, 8))
 
     # 輸入框
-    frame_input = ttk.Frame(root)
+    frame_input = ttk.Frame(parent)
     frame_input.pack(pady=4)
     entry_guess = ttk.Entry(frame_input, width=12, font=("Segoe UI", 12))
     entry_guess.pack(side=tk.LEFT, padx=4)
@@ -42,15 +42,15 @@ def main():
     btn_restart = ttk.Button(frame_input, text="再玩一次", style="Accent.TButton")
 
     # 提示標籤（深灰）
-    label_hint = ttk.Label(root, text="輸入數字後按「猜」", font=("Segoe UI", 10), style="Hint.TLabel")
+    label_hint = ttk.Label(parent, text="輸入數字後按「猜」", font=("Segoe UI", 10), style="Hint.TLabel")
     label_hint.pack(pady=12)
 
     # 猜測次數標籤（綠）
-    label_count = ttk.Label(root, text="猜測次數：0", font=("Segoe UI", 9), style="Count.TLabel")
+    label_count = ttk.Label(parent, text="猜測次數：0", font=("Segoe UI", 9), style="Count.TLabel")
     label_count.pack(pady=4)
 
     # 顯示本局答案（秘密數字），紅色文字
-    label_secret = ttk.Label(root, text=f"答案：{game.answer}", font=("Segoe UI", 9), style="Secret.TLabel")
+    label_secret = ttk.Label(parent, text=f"答案：{game.answer}", font=("Segoe UI", 9), style="Secret.TLabel")
     label_secret.pack(pady=4)
 
     def update_count_display():
@@ -94,6 +94,10 @@ def main():
     btn_restart.config(command=on_restart)
     entry_guess.focus_set()
 
+
+def main():
+    root = tk.Tk()
+    run(root)
     root.mainloop()
 
 

@@ -24,13 +24,23 @@ venv\Scripts\activate
 
 ## 執行遊戲
 
+**建議**：從主選單進入，可選擇要玩的遊戲。
+
 啟動虛擬環境後執行：
+
+```powershell
+python main.py
+```
+
+會開啟「遊戲選單」視窗，內有 3 個按鈕：按「猜數字」可開啟猜數字遊戲；其餘兩個按鈕目前為預留。
+
+亦可直接只玩猜數字（不經主選單）：
 
 ```powershell
 python game.py
 ```
 
-或直接雙擊 `game.py`，或在未啟用虛擬環境時以 `python game.py` 執行（使用系統 Python）。在 Windows 上從檔案總管雙擊 `game.py` 或從終端機執行皆可正常開啟視窗。
+或直接雙擊 `main.py` / `game.py`。在 Windows 上從終端機或檔案總管執行皆可。
 
 若只想測試猜數字邏輯（命令列），可執行：`python game_logic.py`（輸入 `q` 結束）。
 
@@ -39,7 +49,8 @@ python game.py
 ```
 python-pr1/
 ├── README.md       # 本說明
-├── game.py         # 遊戲主程式（GUI + 邏輯）
+├── main.py         # 主選單（3 個遊戲按鈕入口）
+├── game.py         # 猜數字遊戲 GUI（可由 main 或單獨執行）
 ├── game_logic.py   # 猜數字核心邏輯（可獨立測試）
 └── venv/           # 虛擬環境（勿提交至版控可加 .gitignore）
 ```
