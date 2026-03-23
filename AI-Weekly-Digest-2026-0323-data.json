@@ -1,0 +1,108 @@
+{
+  "title": "AI 一週要聞精選｜2026/03/16 – 03/23",
+  "subtitle": "精選 20 則繁體中文 AI 重要消息，分為三大分類",
+  "date": "2026-03-23",
+  "categories": [
+    {
+      "name": "產業動態與政策",
+      "emoji": "🏛️",
+      "color": "1B4F72",
+      "items": [
+        {
+          "title": "NVIDIA GTC 2026：Vera Rubin 架構亮相，黃仁勳預估訂單達 1 兆美元",
+          "summary": "NVIDIA 在 GTC 2026 大會發表 Vera Rubin NVL72 系統與首款 Agentic AI 專用 CPU Vera，並宣布與 Adobe、SAP、Salesforce 等 15 家企業合作推動 AI Agent 開源生態。黃仁勳預估 Blackwell 與 Vera Rubin 訂單至 2027 年將達 1 兆美元。"
+        },
+        {
+          "title": "OpenAI 併購 Python 工具商 Astral，Ruff 與 uv 將整合進 Codex",
+          "summary": "OpenAI 宣布收購 Astral，將旗下熱門 Python 開發工具 uv、Ruff、ty 整合進 Codex 平台。此舉直接瞄準 Anthropic 的 Claude Code，Codex 目前已突破 200 萬週活躍用戶，較年初成長 3 倍。"
+        },
+        {
+          "title": "OpenClaw 引爆 AI Agent 熱潮，成史上最快成長開源專案",
+          "summary": "奧地利開發者 Peter Steinberger 打造的開源 AI Agent 工具 OpenClaw，GitHub 星數突破 24.7 萬，成為史上最快達標的開源專案。NVIDIA 在 GTC 發表 NemoClaw 整合，Jensen Huang 稱其為「下一個 ChatGPT 時刻」。中國科技圈大舉採用。"
+        },
+        {
+          "title": "Anthropic 投資 1 億美元成立 Claude Partner Network",
+          "summary": "Anthropic 於 3 月 12 日宣布投入 1 億美元建立 Claude Partner Network，被視為本月最具指標性的產業佈局，旨在擴大 Claude 在企業端的生態系與合作夥伴網絡。"
+        },
+        {
+          "title": "Anthropic 與五角大樓爆發法律衝突，Google Cloud 趁機搶入",
+          "summary": "Anthropic 挑戰美國國防部將其列為供應鏈風險的決定，同時 Google Cloud CEO 低調會面五角大樓官員，搶占 AI 國防市場。事件凸顯 AI 軍事應用的倫理爭議與商業競爭。"
+        },
+        {
+          "title": "美國起訴走私 AI 晶片至中國案，涉及數十億美元",
+          "summary": "美國司法部起訴三名與 Super Micro Computer 相關人士，涉嫌協助走私數十億美元的 AI 晶片至中國，凸顯中美 AI 晶片禁令執法力度升級。"
+        },
+        {
+          "title": "阿里巴巴推企業 AI Agent 平台「悟空」，CEO 重整 AI 戰線",
+          "summary": "阿里巴巴正式推出面向企業的 AI 多代理協作平台「悟空」（Wukong），主打自動化工作流程。同步宣布成立全新 AI 事業群 Alibaba AI，由 CEO 親自領軍。"
+        }
+      ]
+    },
+    {
+      "name": "技術與開源",
+      "emoji": "🛠️",
+      "color": "1A5276",
+      "items": [
+        {
+          "title": "Anthropic 發布 Claude Sonnet 4.6，1M 上下文與編碼能力大幅躍進",
+          "summary": "Anthropic 推出 Claude Sonnet 4.6，支援 100 萬 token 上下文窗口（beta），在編碼、電腦操作、Agent 規劃方面全面升級。定價維持 $3/$15 per M tokens，成為 claude.ai 和 Cowork 預設模型。"
+        },
+        {
+          "title": "OpenAI 推出 GPT-5.4 mini 和 nano，超低價搶攻輕量市場",
+          "summary": "OpenAI 發布 GPT-5.4 mini 和 nano 模型，nano 版本 API 定價僅 $0.20/M input tokens，瞄準輕量級生產應用場景。與 Anthropic Haiku 4.5、Google Gemini Flash-Lite 展開超低價 AI 三方競爭。"
+        },
+        {
+          "title": "Google 發布 Gemini 3.1 Pro 與 Flash-Lite Preview",
+          "summary": "Google 推出 Gemini 3 系列最新迭代 Gemini 3.1 Pro Preview 與首款 Flash-Lite 模型。同步淘汰 Gemini 3 Pro Preview，推動開發者遷移至新版本。"
+        },
+        {
+          "title": "Donald Knuth 發表論文讚嘆 Claude Opus 4.6 解決圖論難題",
+          "summary": "電腦科學大師 Donald Knuth 發表論文《Claude's Cycles》，驚嘆 Anthropic 的 Claude Opus 4.6 成功解決他數週未解的 3D 有向圖 Hamilton 迴路問題。論文以「Shock! Shock!」開頭，引發學術界廣泛討論。"
+        },
+        {
+          "title": "Anthropic Haiku 4.5 發布，SWE-bench 73.3% 媲美前代 Sonnet",
+          "summary": "Anthropic 推出 Haiku 4.5，在編碼、電腦操作和 Agent 任務上達到與 Sonnet 4 相當的水準，SWE-bench Verified 得分 73.3%，定位為高性價比的生產級模型。"
+        },
+        {
+          "title": "Uber 攜手 NVIDIA Drive AV，2028 年部署 28 城市自駕車隊",
+          "summary": "Uber 宣布將使用 NVIDIA Drive AV 軟體在全球 28 座城市部署自駕車隊，首批城市為洛杉磯和舊金山。Nissan、BYD、Hyundai 等車廠同步加入 NVIDIA Drive Hyperion Level 4 自駕計畫。"
+        },
+        {
+          "title": "Rust 社群發表 AI 觀點調查報告",
+          "summary": "Rust 核心貢獻者與維護者發表關於 AI 的多元觀點調查報告，探討 AI 輔助編程對開源社群的影響、程式碼品質疑慮以及社群治理挑戰，引發開發者圈廣泛討論。"
+        }
+      ]
+    },
+    {
+      "name": "產品應用與社會影響",
+      "emoji": "📱",
+      "color": "154360",
+      "items": [
+        {
+          "title": "Claude Cowork Projects 上線，新增排程任務功能",
+          "summary": "Anthropic 為 Claude Cowork 新增 Projects 功能與排程任務（Scheduled Tasks），支援定期與按需執行。同步推出 Customize 區域，將 Skills、Plugins、Connectors 整合在同一介面。"
+        },
+        {
+          "title": "Claude 內嵌式互動視覺化功能正式推出",
+          "summary": "Anthropic 為 Claude 推出 Inline Visualizations 功能，能在對話中即時生成可互動的圖表、流程圖與視覺化元素，無需撰寫程式碼。支援即時調整與修改，大幅提升資料溝通效率。"
+        },
+        {
+          "title": "Google Gemini Personal Intelligence 免費開放所有美國用戶",
+          "summary": "Google 於 3 月 17 日將 Gemini Personal Intelligence 功能從付費版擴展至免費用戶，讓 Gemini 可連結用戶的 Gmail、Google Photos、Docs 與 YouTube 歷史紀錄，提供個人化 AI 助理服務。"
+        },
+        {
+          "title": "Walmart 與 OpenAI 合作 Agentic Shopping 引發零售業變革",
+          "summary": "Walmart 與 OpenAI 的 Agentic Shopping 合作案持續推進，AI Agent 可代替消費者在平台搜尋商品、比價並下單。此合作模式引發零售產業對 AI 驅動購物體驗的深入討論。"
+        },
+        {
+          "title": "McKinsey 報告：12% 工作任務已被 AI 自動化",
+          "summary": "McKinsey 全球研究院 2026 年 3 月報告顯示，過去兩年間 12% 的經濟活動工作任務已被 AI 自動化，但同期也創造了 8% 的全新 AI 相關職位類別，顯示 AI 對就業市場的雙面影響。"
+        },
+        {
+          "title": "華盛頓州通過 AI 聊天機器人安全法案 HB 2225",
+          "summary": "華盛頓州議會在休會前夕通過 AI 伴侶聊天機器人安全法案 HB 2225，成為美國首批針對 AI 互動安全性立法的州之一，要求 AI 聊天服務提供者遵守用戶保護與透明度標準。"
+        }
+      ]
+    }
+  ]
+}
