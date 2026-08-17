@@ -44,6 +44,28 @@ python game.py
 
 若只想測試猜數字邏輯（命令列），可執行：`python game_logic.py`（輸入 `q` 結束）。
 
+## 建立可執行檔（Windows .exe）
+
+使用 **PyInstaller** 可將程式打包成單一 `.exe`，在未安裝 Python 的 Windows 電腦上也能執行。
+
+1. **安裝 PyInstaller**（建議在虛擬環境中）：
+   ```powershell
+   venv\Scripts\activate
+   pip install pyinstaller
+   ```
+
+2. **打包**（以主選單為進入點）：
+   ```powershell
+   pyinstaller --onefile --windowed --name "GameMenu" main.py
+   ```
+   - `--onefile`：產生單一執行檔（否則會是一個資料夾內多個檔案）
+   - `--windowed`：不顯示命令列視窗（適合 GUI）
+   - `--name "GameMenu"`：執行檔名稱（可改成你喜歡的英文名稱）
+
+3. **取得執行檔**：完成後在專案目錄下的 `dist` 資料夾內會出現 `GameMenu.exe`。將該檔案複製到任何 Windows 電腦即可雙擊執行。
+
+若打包時出現防毒或 Windows Defender 警示，屬常見現象（PyInstaller 產生的 exe 常被誤判），可加入排除或從專案目錄執行。
+
 ## 專案結構
 
 ```
